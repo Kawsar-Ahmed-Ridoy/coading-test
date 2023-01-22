@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="h-screen lg:w-2/4 md:w-[100%] px-10 mx-auto mt-20">
+    <div className="lg:w-2/4 md:w-[100%] px-10 mx-auto mt-20">
       <div className=" rounded-lg shadow-lg">
         <div className="w-full  ">
           <h1 className="text-3xl font-bold text-center pt-16 mb-6">Form</h1>
@@ -44,7 +45,7 @@ const Home = () => {
             <label className="label-text ml-2 font-bold">Agree to terms</label>
             <div className="flex flex-col my-6 justify-between sm:flex-row items-center">
                 <button className="border border-black px-6 py-2 rounded-md font-bold " type="submit">Save</button>
-                <p className="my-auto ml-2">Result saved <span className="underline font-bold ">click here to see the result</span></p>
+                <p className="my-auto ml-2">Result saved <Link to={'/results'} className="underline font-bold hover:text-blue-500">click here to see the result</Link></p>
             </div>
           </form>
         </div>
